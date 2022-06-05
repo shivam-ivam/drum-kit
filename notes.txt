@@ -1,0 +1,90 @@
+-> addEventListner : Syntax --> 
+                  document.querySelector("selector").addEventListner("type","work");
+                   : example -->
+                  document.querySelector("button").addEventListner("click",handleClick);
+                   function handleClick(){
+                       alert("i got clicked ");
+                   }
+
+-> named functions and anonymous function
+
+-------------------------------------
+ SOUND PLAYING 
+
+-> var audio=new Audio('sounds/crash.mp3'); 
+   audio.play();
+
+--------------------------------------
+
+-> this : this is used to get object
+
+-------------------------------------
+  OBJECTS 
+       ---> grouping of properties 
+                var bellboy1= {
+               name="timmy",
+               age=19,
+               permit=true
+                }
+
+        ---> bellboy1.name;
+                   --> 'timmy'
+
+---------------------------------
+     CONSTRUCTOR FUNCTION 
+
+-> FUNCTION_NAME(values){
+  properties;
+}          ---> function_name should be capitalised 
+           ---> this is used to make many objects with same properties easily
+        example:   BELLBOY(name,age,hasWorkPermit,language){
+          this.name=name;
+          this.age=age;
+          this.hasWorkPermit=hasWorkPermit;
+          this.language=language;
+        }
+               
+           ---> INITIALISE OBJECT 
+                  var bellboy1=new BELLBOY("timmy",19,true,["french ","english"]);
+
+
+--------------------------------------------------
+  SWITCH CASE 
+
+->syntax --> switch(expression){
+  case expression:
+  
+  break;
+  default:
+}
+
+---------------------------------------------
+ ADDING METHODS INSIDE THE FUNCTION CONSTRUCTOR
+
+->  function BELLBOY(name,age,permit,language){
+    this.name=name;
+    this.gae=age;
+    this.permit=permit;
+    this.language=language;
+    this.clean=function(){
+        alert("cleaning your all data");
+        alert("danger!");
+    }
+}
+        
+        --> var bellboy1=new BELLBOY("timmy",19,true,["english","french"]);
+        --> CALLING THAT METHOD -->
+             bellboy1.clean();
+
+-----------------------------
+ CALLBACK FUNCTION
+
+ ->callback(funciton_name); 
+
+ --------------------------------
+ SETING TIMEOUT FUNCTION
+
+ -> setTimeout(function(),time)
+     setTimeout(function(){
+         document.querySelector("." + currentKey).classList.remove("pressed");
+     },100);
